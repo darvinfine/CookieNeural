@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>CookieNeural Demo &middot; FAQ</title>
+		<link rel="stylesheet" href="interface/message.css">
+		<link rel="stylesheet" href="interface/windows.css">
+		<link rel="stylesheet" href="interface/main.css">
+		<link rel="stylesheet" href="interface/faq.css">
+		<link id="theme" rel="stylesheet" href="interface/light.css">
+		<link rel="icon" href="src/watermarks/icon.png">
+	</head>
+	<body id="faqBackground">
+		<div class="navigate">
+			<div id="logotype">
+				<img id="logoLight" alt="CookieNeural Demo Logotype" src="src/watermarks/logo_dark.png">
+				<img id="logoDark" alt="CookieNeural Demo Logotype" src="src/watermarks/logo_adaptive.png">
+			</div>
+			<span id="faqLabel">ВОПРОСЫ И ОТВЕТЫ (FAQ)</span>
+			<div id="faqSelect" style="background: #1c1c24; border-radius: 2px;"></div>
+			<div class="faqListing">
+				<button onclick="openFAQ1()">
+					<span id="#">Что такое CookieNeural?</span>
+				</button>
+				<button onclick="openFAQ2()">
+					<span id="#">Работа с фото и документами</span>
+				</button>
+				<button onclick="openFAQ3()">
+					<span id="#">Поиск в интернете</span>
+				</button>
+				<button onclick="openFAQ4()">
+					<span id="#">Исходный код</span>
+				</button>
+				<button onclick="openFAQ5()">
+					<span id="#">Безопасность</span>
+				</button>
+				<button onclick="openFAQ6()">
+					<span id="#">Учётная запись</span>
+				</button>
+				<button onclick="openFAQ7()">
+					<span id="#">Разработка</span>
+				</button>
+				<button onclick="openFAQ8()">
+					<span id="#">Участие в тестировании</span>
+				</button>
+				<button onclick="openFAQ9()">
+					<span id="#">Другие вопросы?</span>
+				</button>
+			</div>
+			<div class="downFAQ">
+				<div id="downFAQ1">
+					<div id="themeContainer">
+						<img id="lightInterfaceIcon" src="src/light_theme.png">
+						<img id="darkInterfaceIcon" src="src/darkTheme/night_theme.png">
+						<span id="themeLabel">Тёмная тема?</span>
+						<input id="checkTheme" type="checkbox">
+					</div>
+					<div id="langSetting">
+						<button id="russianButton" onclick="openRussianLang()">
+							<img src="src/russia.png">
+						</button>
+						<span id="locateLabel">Локализация</span>
+						<button id="englishButton" onclick="openEnglishLang()">
+							<img src="src/america.png">
+						</button>
+					</div>
+				</div>
+				<div id="downFAQ2">
+					<button onclick="openWindowAgrement()">
+						<b>ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</b>
+					</button>
+					<button onclick="openWindowCredits()">
+						<b>ТИТРЫ</b>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="faqContainer">
+			<div id="faqInformation1" class="faqInformation1">
+				<h3>Что такое CookieNeural?</h3>
+				<span><b>CookieNeural</b> - чат-бот, а также бесплатный нейросетевой ассистент на подобии ChatGPT, DeepSeek, Grok, Claude, Gemini, сделанный на основе французкого стартапа <a href="https://mistral.ai/"><b>Mistral AI</b></a>, и доработанный компанией <b>RabbitLower</b>.</span>
+				<br>
+				<br>
+				<span>Нейросеть подходит пользователю для повседневных задач, и имеет при себе базовые возможности, такие как глубокий поиск в Интернете, работа с фотографиями и документами и генерации кода.</span>
+				<br>
+				<br>
+				<span>Также в чат-боте есть безлимит на создание чатов и отправку в них сообщений, но чтобы их создавать для этого нужен аккаунт в CookieNeural.</span>
+			</div>
+			<div id="faqInformation2" class="faqInformation2">
+				<h3>Работа с фото и документами</h3>
+			</div>
+			<div id="faqInformation3" class="faqInformation3">
+				<h3>Поиск по интернету</h3>
+			</div>
+			<div id="faqInformation4" class="faqInformation4">
+				<h3>Исходный код</h3>
+			</div>
+			<div id="faqInformation5" class="faqInformation5">
+				<h3>Безопасность</h3>
+			</div>
+			<div id="faqInformation6" class="faqInformation6">
+				<h3>Учётная запись</h3>
+			</div>
+			<div id="faqInformation7" class="faqInformation7">
+				<h3>Разработка</h3>
+			</div>
+			<div id="faqInformation8" class="faqInformation8">
+				<h3>Участие в тестировании</h3>
+			</div>
+			<div id="faqInformation9" class="faqInformation9">
+				<h3>Другие вопросы?</h3>
+			</div>
+			<div id="faqAgreement" class="faqAgreement">
+				<h3>Пользовательское соглашение</h3>
+			</div>
+			<div id="faqCredits" class="faqCredits">
+				<h3>Титры</h3>
+			</div>
+		</div>
+	</body>
+	<script src="mechanic/interface.js"></script>
+	<script src="mechanic/language.js"></script>
+	<script src="mechanic/faq.js"></script>
+</html>

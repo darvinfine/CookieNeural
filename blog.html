@@ -1,0 +1,77 @@
+<html>
+<!-- CookieAI Demo 1.0.0. Home page the app -->
+<!-- Lincense to project watching a README.TXT -->
+<head>
+	<title>CookieAI Demo - Почему нейрослоп опасен</title>
+	<link rel="stylesheet" href="interface/interface.css">
+	<link rel="stylesheet" href="interface/message.css">
+	<link rel="stylesheet" href="interface/windows.css">
+	<link rel="stylesheet" href="interface/dark_theme.css">
+	<link rel="stylesheet" href="interface/main.css">
+	<link rel="stylesheet" href="interface/home.css">
+	<link rel="icon" href="src/watermarks/icon.png">
+</head>
+
+<body onclick="closeListingBar()">
+<!-- Navigation bar -->
+	<div class="navbar">
+		<div id="logotype">
+			<img src="src/watermarks/logo_night.png">
+			<span>1.0.0</span>
+		</div>
+		<div id="pages">
+			<a href="faq.html"><img src="src/faq.png">FAQ</a>
+			<a href="https://t.me/cookieai_robot"><img src="src/telegram.png">Telegram</a>
+		</div>
+	</div>
+<!-- Naming Blog -->
+	<div class="welcomeBanner">
+		<div id="bannerItems">
+			<img id="signWelcomeRus" src="src/signs/blog_rus.png">
+			<img id="signWelcomeEng" src="src/signs/blog_eng.png">
+			<br>
+			<span>Разработчик CookieAI рассказывает, почему же это так.</span>
+		</div>
+	</div>
+	<!-- Descript Blog -->
+		<div class="descriptCenter">
+			<span>В наше время, в 2026 году, нейросети стали повседневной частью нашей жизни. С помощью ИИ можно быстро сделать домашнее задание, написать конспект или подробно обьяснить какую-то тему - если это ChatGPT, DeepSeek, Grok, Gemini и другие.</span>
+		</div>
+	<!-- Footer bar -->
+	<div class="footerBar">
+		<div id="footerUp">
+			<img id="cookieai" src="src/watermarks/logo_light.png">
+			<img id="rabbitlower" src="src/watermarks/rl_light.png">
+		</div>
+		<div id="footerCenter">
+			<span>Created, developed and designed RabbitLower (Darvin Flinston), 2026. Trained on <a href="https://mistral.ai/">Mistral AI</a>.</span>
+		</div>
+		<div id="footerDown">
+			<button onclick="openRussianLang()">
+				<img src="src/russia.png">
+				<b>RUS</b>
+			</button>
+			<button onclick="openEnglishLang()">
+				<img src="src/america.png">
+				<b>ENG</b>
+			</button>
+			<button onclick="openLightTheme()">
+				<img src="src/day.png">
+				<b>LIGHT</b>
+			</button>
+			<button onclick="openDarkTheme()">
+				<img src="src/night.png">
+				<b>DARK</b>
+			</button>
+			<a href="faq.html"><b>FAQ</b></a>
+			<a href="https://t.me/cookieai_robot"><b>Telegram</b></a>
+		</div>
+	</div>
+
+<script src="mechanic/message.js"></script>
+<script src="mechanic/interface.js"></script>
+<script src="mechanic/windows.js"></script>
+<script src="mechanic/language.js"></script>
+<script src="mechanic/items.js"></script>
+
+</html>

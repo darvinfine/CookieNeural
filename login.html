@@ -1,0 +1,123 @@
+<!-- CookieAI Demo 1.0.0. This official app of "RabbitLower" -->
+<!-- Lincense to project watching on README.TXT -->
+
+<html>
+<head>
+	<title>CookieAI Demo &middot; Login</title>
+	<link rel="stylesheet" href="interface/message.css">
+	<link rel="stylesheet" href="interface/windows.css">
+	<link rel="stylesheet" href="interface/main.css">
+	<link rel="stylesheet" href="interface/register.css">
+	<link id="theme" rel="stylesheet" href="interface/light.css">
+	<link rel="icon" href="src/watermarks/icon.png">
+</head>
+
+<body id="background">
+<!-- Navigation bar -->
+	<div id="navbarTheme" class="navbar">
+		<div id="logotype">
+			<img alt="CookieAI Demo Logotype" id="logoDay" src="src/watermarks/logo_day.png">
+			<img alt="CookieAI Demo Logotype" id="logoNight" src="src/watermarks/logo_night.png">
+		</div>
+		<div id="pages">
+			<a href="#">
+				<img id="faqLight" src="src/faq_light.png">
+				<img id="faqDark" src="src/darkTheme/faq_dark.png">
+				<span>FAQ</span>
+			</a>
+			&middot;
+			<a href="https://t.me/cookieai_robot">
+				<img id="telegramLight" src="src/telegram_light.png">
+				<img id="telegramDark" src="src/darkTheme/telegram_dark.png">
+				<span id="telegramLabel">CookieNeural в Telegram</span>
+			</a>
+		</div>
+	</div>
+<!-- Register/Login container -->
+	<div class="register_position">
+		<div class="register_connect">
+			<div class="register_container">
+				<div id="register_head">
+					<button id="registerButton" onclick="openRegForm()">
+						<b>РЕГИСТРАЦИЯ</b>
+					</button>
+					<button id="loginButton" onclick="openLoginForm()">
+						<b>ВХОД</b>
+					</button>
+				</div>
+				<div id="registerForm" class="register_form">
+					<input type="hidden" name="register_sumbit" value="1">
+					<input type="text" name="username" placeholder="Имя пользователя..." required minlength="3">
+					<div id="password">
+						<input type="password" name="password" placeholder="Пароль..." required minlength="6">
+						<button id="seekPassword">
+							<img id="hiddenLight" src="src/hide.png">
+							<img id="hiddenDark" src="src/darkTheme/hide.png">
+						</button>
+					</div>
+					<input type="password" name="confirm_password" placeholder="Повторите пароль..." required>
+					<input type="email" name="email" placeholder="Email..." required>
+					<button type="sumbit" id="register">
+						<span>Зарегистрироваться<img id="loadingReg" src="src/loading.gif"></span>
+					</button>
+					<div id="register_pages">
+						<a href="#">Уже есть аккаунт?</a>
+							 &middot; 
+						<a href="#">Не могу войти</a>
+					</div>
+				</div>
+				<div id="loginForm" class="login_form">
+					<input type="hidden" name="login_sumbit" value="1">
+					<input type="text" name="username" placeholder="Имя пользователя..." required>
+					<div id="password">
+						<input type="password" name="password" placeholder="Пароль..." required>
+						<button id="seekPassword">
+							<img id="hiddenLight" src="src/hide.png">
+							<img id="hiddenDark" src="src/darkTheme/hide.png">
+						</button>
+					</div>
+					<button type="sumbit" id="login">
+						<span>Вход<img id="loadingReg" src="src/loading.gif"></span>
+					</button>
+					<div id="login_pages">
+						<a href="#">Впервые в CookieNeural?</a>
+							 &middot; 
+						<a href="#">Не могу войти</a>
+					</div>
+				</div>
+			</div>
+			<div class="interface_buttons">
+				<div id="themeSetting">
+					<img id="statusLight" src="src/light_theme.png">
+					<img id="statusDark" src="src/darkTheme/night_theme.png">
+					<span id="themeLabel">Тёмная тема?</span>
+					<input id="checkTheme" type="checkbox">
+				</div>
+				<div id="langSetting">
+					<button id="russianButton" onclick="openRussianLang()">
+						<img src="src/russia.png">
+					</button>
+					<span id="locateLabel">Локализация</span>
+					<button id="englishButton" onclick="openEnglishLang()">
+						<img src="src/america.png">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Credits -->
+<div class="credits">
+	<span>CookieNeural 1.0.0 - Developed, trained and designed on RabbitLower (Darvin Flinston) 2026.</span>
+</div>
+
+	
+<script src="mechanic/message.js"></script>
+<script src="mechanic/interface.js"></script>
+<script src="mechanic/windows.js"></script>
+<script src="mechanic/language.js"></script>
+<script src="mechanic/items.js"></script>
+<script src="mechanic/upload.js"></script>
+<script src="mechanic/app.js"></script>
+<script src="mechanic/login.js"></script>
+
+</html>

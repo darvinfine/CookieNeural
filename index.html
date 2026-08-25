@@ -1,0 +1,117 @@
+<html>
+<!-- CookieAI Demo 1.0.0. Home page the app -->
+<!-- Lincense to project watching a README.TXT -->
+<head>
+	<title>CookieAI Demo</title>
+	<link rel="stylesheet" href="interface/interface.css">
+	<link rel="stylesheet" href="interface/message.css">
+	<link rel="stylesheet" href="interface/windows.css">
+	<link rel="stylesheet" href="interface/dark_theme.css">
+	<link rel="stylesheet" href="interface/main.css">
+	<link rel="stylesheet" href="interface/home.css">
+	<link rel="icon" href="src/watermarks/icon.png">
+</head>
+
+<body onclick="closeListingBar()">
+<!-- Navigation bar -->
+	<div class="navbar">
+		<div id="logotype">
+			<img src="src/watermarks/logo_night.png">
+			<span>1.0.0</span>
+		</div>
+		<div id="pages">
+			<a href="faq.html"><img src="src/faq.png">FAQ</a>
+			<a href="https://t.me/cookieai_robot"><img src="src/telegram.png">Telegram</a>
+		</div>
+	</div>
+<!-- Welcome Banner -->
+	<div class="welcomeBanner">
+		<div id="bannerItems">
+			<img id="signWelcomeRus" src="src/signs/welcome_rus.png">
+			<img id="signWelcomeEng" src="src/signs/welcome_eng.png">
+			<br>
+			<span id="welcomeDescription">Я несъедобен, но умею общаться с <span id="selectText">ОТЗЫВЧИВОСТЬЮ</span>. И рисовать.</span>
+			<br>
+			<a id="startApp" href="app.html">ПОПРОБОВАТЬ</a>
+		</div>
+	</div>
+	<!-- Features -->
+	<div class="featuresList">
+		<div id="signFeatures">
+			<img id="signFeaturesRus" src="src/signs/features_rus.png">
+			<img id="signFeaturesEng" src="src/signs/features_eng.png">
+		</div>
+		<div class="featuresCenter">
+			<div id="featurePage">
+				<img src="src/feature1.png">
+				<br>
+				<b id="titleFeature1">Почти точный ответ</b>
+				<br>
+				<span id="textFeature1">CookieAI ищет информацию по вашему запросу в интернете, что позволяет Куки расскзать вам с точностью.</span>
+			</div>
+			<div id="featurePage">
+				<img src="src/feature2.png">
+				<br>
+				<b id="titleFeature2">Генерация картинок</b>
+				<br>
+				<span id="textFeature2">по запросу, и даже с использованием исходных фото. <span id="selectText">Но учтите, что написано ниже!</span></span>
+			</div>
+			<div id="featurePage">
+				<img src="src/feature3.png">
+				<br>
+				<b id="titleFeature1">Распознавание по фото</b>
+				<br>
+				<span id="textFeature1">Куки рассматривает фотографиии и может их подробнее описать. А также дать ответ на вопрос, который на фото.</span>
+			</div>
+		</div>
+	</div>
+	<!-- Warning message -->
+	<div class="warningMessage">
+		<div id="signWarning">
+			<img id="signWarningRus" src="src/signs/warning_rus.png">
+			<img id="signWarningEng" src="src/signs/warning_eng.png">
+		</div>
+		<div class="warningCenter">
+			<span id="warningText1">Желательно исползовать CookieAI <span id="selectText">по делу</span>.</span>
+				<br>
+			<span id="warningText2">Сделанное руками человека <span id="selectText">куда лучше</span>, чем железяка.</span>
+		</div>
+	</div>
+	<!-- Footer bar -->
+	<div class="footerBar">
+		<div id="footerUp">
+			<img id="cookieai" src="src/watermarks/logo_light.png">
+			<img id="rabbitlower" src="src/watermarks/rl_light.png">
+		</div>
+		<div id="footerCenter">
+			<span>Created, developed and designed RabbitLower (Darvin Flinston), 2026. Trained on <a href="https://mistral.ai/">Mistral AI</a>.</span>
+		</div>
+		<div id="footerDown">
+			<button onclick="openRussianLang()">
+				<img src="src/russia.png">
+				<b>RUS</b>
+			</button>
+			<button onclick="openEnglishLang()">
+				<img src="src/america.png">
+				<b>ENG</b>
+			</button>
+			<button onclick="openLightTheme()">
+				<img src="src/day.png">
+				<b>LIGHT</b>
+			</button>
+			<button onclick="openDarkTheme()">
+				<img src="src/night.png">
+				<b>DARK</b>
+			</button>
+			<a href="faq.html"><b>FAQ</b></a>
+			<a href="https://t.me/cookieai_robot"><b>Telegram</b></a>
+		</div>
+	</div>
+
+<script src="mechanic/message.js"></script>
+<script src="mechanic/interface.js"></script>
+<script src="mechanic/windows.js"></script>
+<script src="mechanic/language.js"></script>
+<script src="mechanic/items.js"></script>
+
+</html>

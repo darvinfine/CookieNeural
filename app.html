@@ -1,0 +1,544 @@
+<!-- CookieNeural Demo 1.0.0. This official app of "RabbitLower" -->
+<!-- Lincense to project watching on README.TXT -->
+
+<html>
+<head>
+	<title>CookieNeural Demo Chat</title>
+	<link rel="stylesheet" href="interface/message.css">
+	<link rel="stylesheet" href="interface/windows.css">
+	<link rel="stylesheet" href="interface/main.css">
+	<link rel="stylesheet" href="interface/app.css">
+	<link rel="stylesheet" href="interface/components.css">
+	<link id="theme" rel="stylesheet" href="interface/light.css">
+	<link rel="icon" href="src/watermarks/icon.png">
+</head>
+
+<body id="backgroundTheme" onclick="closeListingBar()">
+<!-- Navigation bar -->
+	<div id="navbarTheme" class="navbar">
+		<div id="logotype">
+			<img alt="CookieNeural Demo Logotype" id="logoDay" src="src/watermarks/logo_day.png">
+			<img alt="CookieNeural Demo Logotype" id="logoNight" src="src/watermarks/logo_night.png">
+		</div>
+		<div id="titleChat">
+			<b id="titleIndicator"><span id="createChatLabel">Новый чат</span></b>
+		</div>
+		<div id="navButtons">
+			<button onclick="openNewChat()">
+				<img id="newChatLight" src="src/create_chat.png">
+				<img id="newChatDark" src="src/darkTheme/create_chat.png">
+			</button>
+			<button onclick="openHistoryChats()">
+				<img id="historyChatsLight" src="src/history_chats.png">
+				<img id="historyChatsDark" src="src/darkTheme/history_chats.png">
+			</button>
+			<button onclick="openWindowSettings()">
+				<img id="settingsButtonLight" src="src/menu.png">
+				<img id="settingsButtonDark" src="src/darkTheme/menu.png">
+			</button>
+		</div>
+	</div>
+<!-- Chat Banner -->
+<div style="display: none;" id="chatBanner" class="connectBanner">
+	<div class="chatBanner">
+		<img id="pictureLight" src="src/watermarks/picture_dark.png">
+		<img id="pictureDark" src="src/watermarks/picture_light.png">
+		<b id="helloLabel">Привет, Я CookieNeural</b>
+		<span id="aboutLabel">А так ты можешь называть меня Куки. Введи какой-нибудь запрос снизу, и я на него отвечу.</span>
+	</div>
+</div>
+<!-- Loading Chat -->
+<div id="loadingChat" class="loadingChat">
+	<img id="loadingLight" src="src/loading.gif">
+	<img id="loadingDark" src="src/loading_adaptive.gif">
+</div>
+<div class="connect_elements">
+<!-- Connecting Message -->
+	<div id="connectingMessage" class="connecting_message">
+		<div id="offlineMessage">
+			<img src="src/loading.gif">
+			<span id="disconnectLabel">Проверка соединения...</span>
+		</div>
+		<div id="onlineMessage">
+			<img src="src/checked.png">
+			<span id="connectLabel">Соединение восстановлено</span>
+		</div>
+	</div>
+<!-- Chat Listing -->
+	<div id="chatContainer" class="chatContainer">
+		<div class="topField"></div>
+		<!-- Sending Message -->
+		<div id="sendingMessage" class="sendingMessage">
+			<div id="sendInformationUser">
+				<b><span>Username</span></b>
+			</div>
+			<span>ну привет <a href="https://hiwee.online/">
+				<img src="src/link.png">
+				https://hiwee.online/
+			</a></span>
+			<div id="errorSending">
+				<button onclick="#">
+					<img src="src/resend.png">
+					<span id="errorSendLabel">Сообщение не удалось отправить. Попробовать заново?</span>
+				</button>
+			</div>
+		</div>
+		<!-- Getting Message -->
+		<div id="gettingMessage" class="gettingMessage">
+			<div id="getInformationUser">
+				<div id="avatarMessage">
+					<img src="src/watermarks/avatar.png">
+				</div>
+				<b><span>CookieNeural</span></b>
+			</div>
+			<span>Привет, меня зовут Куки. А если подробнее, то я языковая нейросетевая модель, разработанная в компании RabbitLower, моё оригинальное именование: CookieNeural. Напиши что-нибудь, и мы об этом вместе обсудим.</span>
+			<div id="codeContainer" class="codeContainer">
+				<div id="codeHead">
+					<span id="languageCode">Python</span>
+					<button id="copyableCode" onclick="copyableCode()">
+						<div id="copyButton">
+							<img id="copyableLight" src="src/copyable.png">
+							<img id="copyableDark" src="src/darkTheme/copyable.png">
+						</div>
+						<div id="sucessCopy">
+							<img id="sucessCopyLight" src="src/sucess.png">
+							<img id="sucessCopyDark" src="src/darkTheme/sucess.png">
+						</div>
+					</button>
+				</div>
+				<div id="sourceCode">
+					<span>print("Hello, World!");</span>
+				</div>
+				<div id="messageCode">
+					<span id="codeLabel">Код сгенерирован ИИ. Могут быть недочёты.</span>
+				</div>
+			</div>
+			<div id="gettingError">
+				<button id="resendMessage">
+					<img src="src/continue.png">
+					<span id="resendLabel">Не удалось сгенерировать сообщение полностью. Попробовать заново?</span>
+				</button>
+			</div>
+			<div id="sources">
+				<button id="sourcesButton" onclick="openWindowSources()">
+					<span id="sourcesLabel">Источники </span> 
+					(<span id="sourcesCount">3</span>)
+				</button>
+			</div>
+			<div id="buttonsMessage">
+				<button id="copyableMessage" onclick="copyableMessage()">
+					<img id="copyableLight" src="src/copyable.png">
+					<img id="copyableDark" src="src/darkTheme/copyable.png">
+				</button>
+				<button onclick="rewriteMessage()">
+					<img id="rewriteLight" src="src/rewrite.png">
+					<img id="rewriteDark" src="src/darkTheme/rewrite.png">
+				</button>
+				<div id="rewrites_count">
+					<button id="lastWrite">
+						<img id="lastLight" src="src/last.png">
+						<img id="lastDark" src="src/darkTheme/last.png">
+					</button>
+					<span id="rewriteCount">0</span>
+					<button id="nextWrite">
+						<img id="nextLight" src="src/next.png">
+						<img id="nextDark" src="src/darkTheme/next.png">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="writingMessage" class="writingMessage">
+			<img id="typingLight" src="src/typing.gif">
+			<img id="typingDark" src="src/darkTheme/typing.gif">
+			<span id="writeLabel">CookieNeural думает...</span>
+		</div>
+		</div>
+	<div class="downField"></div>		
+<!-- Write Field -->
+	<!-- Upload Listing -->
+		<div id="listingUpload" class="listingUpload">
+			<button id="buttonUploadPhoto">
+				<img id="uploadPhotoLight" src="src/photo.png">
+				<img id="uploadPhotoDark" src="src/darkTheme/photo.png">
+				<span id="uploadPhotoLabel">Загрузить фото</span>
+			</button>
+			<button id="buttonUploadDocument">
+				<img id="uploadDocumentLight" src="src/document.png">
+				<img id="uploadDocumentDark" src="src/darkTheme/document.png">
+				<span id="uploadFileLabel">Загрузить файл</span>
+			</button>
+		</div>
+	<div class="writeField">
+		<div class="writeConnect">
+			<div id="importedFiles" class="importedFiles">
+				<div id="imageImport" class="imageImport">
+					<div id="imagePreview">
+						<img src="src/preview/image_preview.png">
+					</div>
+					<div id="imageInfo">
+						<span>Mountain.png</span>
+							<br>
+						<span id="weightFile">2 MB</span>
+							<br>
+						<span id="uploadError">Ошибка загрузки изображения...</span>
+					</div>
+					<button id="skipFile"></button>
+				</div>
+				<div id="documentImport" class="documentImport">
+					<div id="documentPreview">
+						<img src="src/preview/file_preview.png">
+					</div>
+					<div id="fileInfo">
+						<span>readme.txt</span>
+							<br>
+						<span id="weightFile">5 KB</span>
+							<br>
+						<span id="uploadError">Ошибка загрузки файла...</span>
+					</div>
+					<button id="skipFile">&times;</button>
+				</div>
+				<div id="imageImport" class="imageImport">
+					<div id="imagePreview">
+						<img src="src/preview/image_preview.png">
+					</div>
+					<div id="imageInfo">
+						<span>Mountain.png</span>
+							<br>
+						<span id="weightFile">2 MB</span>
+					</div>
+					<button id="skipFile">&times;</button>
+				</div>
+				<div id="documentImport" class="documentImport">
+					<div id="documentPreview">
+						<img src="src/preview/file_preview.png">
+					</div>
+					<div id="fileInfo">
+						<span>readme.txt</span>
+							<br>
+						<span id="weightFile">5 KB</span>
+					</div>
+					<button id="skipFile">&times;</button>
+				</div>
+				<div id="imageImport" class="imageImport">
+					<div id="imagePreview">
+						<img src="src/preview/image_preview.png">
+					</div>
+					<div id="imageInfo">
+						<span>Mountain.png</span>
+							<br>
+						<span id="weightFile">2 MB</span>
+					</div>
+					<button id="skipFile">&times;</button>
+				</div>
+				<div id="documentImport" class="documentImport">
+					<div id="documentPreview">
+						<img src="src/preview/file_preview.png">
+					</div>
+					<div id="fileInfo">
+						<span>readme.txt</span>
+							<br>
+						<span id="weightFile">5 KB</span>
+					</div>
+					<button id="skipFile">&times;</button>
+				</div>
+			</div>
+		<div id="writeAndScroll">
+			<div id="writeFieldUp">
+				<button id="uploadButton" onclick="openUploadListing()">
+					<img id="uploadButtonLight" src="src/upload.png">
+					<img id="uploadButtonDark" src="src/darkTheme/upload.png">
+				</button>
+				<button id="closeUpload" onclick="closeUploadListing()">
+					<img id="closeUploadLight" src="src/exit_upload.png">
+					<img id="closeUploadDark" src="src/darkTheme/exit_upload.png">
+				</button>
+				<textarea onclick="callSendButton()" id="writeMessageField" type="text" placeholder="Напишите сообщение..."></textarea>
+				<div id="emptyButtonSend"></div>
+				<button id="buttonSend" onclick="sendMessage()">
+					<img src="src/send.png">
+				</button>
+				<button style="display: none;" id="buttonStop" onclick="stopMessage()">
+					<img src="src/stop.png">
+				</button>
+			</div>
+			<div id="buttonScrollDown">
+				<button onclick="clickScrollingDown()">
+					<img id="downButtonLight" src="src/down.png">
+					<img id="downButtonDark" src="src/darkTheme/down.png">
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Notifications -->
+	<div id="messageCookieFiles" class="messageCookieFiles">
+		<img src="src/watermarks/icon_light.png">
+		<span id="msgCookieFiles">Несмотря на то, что нейросетевая модель ассоцируется с печеньками, мы также обрабатываем cookie-файлы для безопасности.</span>
+		<button onclick="closeMsgCookieFiles()">ОКЕЙ</button>
+	</div>
+	<div id="messageCopyable" class="messageCopyable">
+		<img src="src/copyable_white.png">
+		<span id="copyableLabel">Текст скопирован</span>
+	</div>
+</body>
+
+<!-- WINDOWS APP -->
+
+<!-- Settings -->
+<div id="windowSettings" class="windowSettings">
+	<div class="modalWindowSettings">
+		<div id="windowTitle">
+			<div id="titleSettingsLeft">
+				<b id="settingsLabel">Настройки</b>
+				<span id="usernameStatus">Username</span>
+			</div>
+			<button id="skipWindowButton" onclick="closeWindowSettings()">
+				<img id="skipButtonLight" src="src/exit.png">
+				<img id="skipButtonDark" src="src/darkTheme/exit.png">
+			</button>
+		</div>
+		<div id="interfaceSettings">
+			<div id="interface_setting">
+				<div id="statusIconInterface">
+					<img id="lightInterfaceIcon" src="src/light_theme.png">
+					<img id="darkInterfaceIcon" src="src/darkTheme/night_theme.png">
+					<span id="themeLabel">Тёмная тема?</span>
+				</div>
+				<div id="labelTheme">
+					<input id="checkTheme" type="checkbox">
+				</div>
+			</div>
+			<div id="localization_setting">
+				<div id="statusIconLocate">
+					<img id="russianIcon" src="src/russia.png">
+					<img style="display: none;" id="englishIcon" src="src/america.png">
+					<span id="locateLabel">Локализация</span>
+				</div>
+				<div id="buttonTheme">
+					<button id="russianButton" onclick="openRussianLang()">Русский</button>
+					<button id="englishButton" onclick="openEnglishLang()">English</button>
+				</div>
+			</div>
+			<div id="username_setting">
+				<button onclick="openWindowAccount()">
+					<img id="pencilLight" src="src/pencil.png">
+					<img id="pencilDark" src="src/darkTheme/pencil.png">
+					<span id="usernameLabel">Настройки аккаунта</span>
+				</button>
+				<a id="createAccount" href="#">
+					<img src="src/login.png">
+					<span id="loginLabel">Войти в аккаунт</span>
+				</a>
+			</div>
+			</div>
+			<div id="credits">
+				<span>CookieNeural 1.0.0 [DEMO] - Developed, trained and designed on RabbitLower (Darvin Flinston) 2026.</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Account Settings -->
+<div id="windowAccount" class="windowAccount">
+	<div class="modalWindowAccount">
+		<div id="windowTitle">
+			<b id="settingsLabel">Настройки аккаунта</b>
+			<button id="skipWindowButton" onclick="closeWindowAccount()">
+				<img id="skipButtonLight" src="src/exit.png">
+				<img id="skipButtonDark" src="src/darkTheme/exit.png">
+			</button>
+		</div>
+		<div id="usernameField">
+			<input id="editLabel" type="name" placeholder="Имя пользователя...">
+			<button id="changeUsername"><span id="changeLabel">ИЗМЕНИТЬ</span><img id="loadUsername" src="src/loading.gif"></button>
+		</div>
+		<span style="display: none;" id="usernameError">Не удалось соединиться с сервером.</span>
+		<span style="display: none;" id="usernameSucess">Имя пользователя изменено.</span>
+		<div id="accountButtons">
+			<button id="clearChats" onclick="openWindowClear()">
+				<img id="clearLight" src="src/clear.png">
+				<img id="clearDark" src="src/darkTheme/clear.png">
+				<span id="clearLabel">Очистить историю чатов</span>
+			</button>
+			<button id="logoutAccount" onclick="openWindowLogout()">
+				<img src="src/logout.png">
+				<span id="logoutLabel">Выйти из аккаунта</span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<!-- Sources -->
+<div id="windowSources" class="windowSources">
+	<div class="modalWindowSources">
+		<div id="windowTitle">
+			<div id="window_sources_left">
+				<b id="sourcesLabel">Источники</b>
+				<span id="countSources">0</span>
+			</div>
+			<button id="skipWindowButton" onclick="closeWindowSources()">
+				<img id="skipButtonLight" src="src/exit.png">
+				<img id="skipButtonDark" src="src/darkTheme/exit.png">
+			</button>
+		</div>
+		<div class="sourcesListing">
+			<a class="sourceContainer">
+				<b id="sourceName">RabbitLower Home</b>
+				<span id="sourceDescription">Интернет-лавочка кроличьей норки, которая производит цифровые штучки с любовью. О нас мало кто знает, но всегда приходят разнообразные идеи к нашему творчеству.</span>
+				<span id="sourceAdress">rabbitlower.site</span>
+			</a>
+			<a class="sourceContainer">
+				<b id="sourceName">RabbitLower Home</b>
+				<span id="sourceDescription">Интернет-лавочка кроличьей норки, которая производит цифровые штучки с любовью. О нас мало кто знает, но всегда приходят разнообразные идеи к нашему творчеству.</span>
+				<span id="sourceAdress">rabbitlower.site</span>
+			</a>
+			<a class="sourceContainer">
+				<b id="sourceName">RabbitLower Home</b>
+				<span id="sourceDescription">Интернет-лавочка кроличьей норки, которая производит цифровые штучки с любовью. О нас мало кто знает, но всегда приходят разнообразные идеи к нашему творчеству.</span>
+				<span id="sourceAdress">rabbitlower.site</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!-- History Chats -->
+<div id="windowHistory" class="windowHistory">
+	<div class="modalWindowHistory">
+		<div id="windowTitle">
+			<div id="window_history_left">
+				<b id="historyLabel">История чатов</b>
+			</div>
+			<div id="window_history_right">
+				<button id="clearChatsButton" onclick="openWindowClear()">
+					<img id="clearLight" src="src/clear.png">
+					<img id="clearDark" src="src/darkTheme/clear.png">
+				</button>
+				<button id="skipWindowButton" onclick="closeHistoryChats()">
+					<img id="skipButtonLight" src="src/exit.png">
+					<img id="skipButtonDark" src="src/darkTheme/exit.png">
+				</button>
+			</div>
+		</div>
+		<div style="display: none;" class="loginMessage">
+			<b id="loginChatLabel">Войдите в аккаунт</b>
+			<span id="loginChatDescription">Чтобы сохранять переписку, а также создавать новые чаты - требуется вход в систему.</span>
+			<a id="createAccount" href="login.html">
+				<img src="src/login.png">
+				<span id="loginLabel">Войти в аккаунт</span>
+			</a>
+		</div>
+		<div id="nullMessage">
+			<span id="nullLabel">Здесь пока нет чатов. Начините диалог с ассистентом, чтобы сохранить его тут.</span>
+		</div>
+		<div class="chatsListing">
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+			<button onclick="openRevalChat()" id="openChat" class="chatPage">
+				<span id="name_chat">Как собрать сварочный аппарат в домашних условиях</span>
+				<span id="datetime_chat">Сегодня, 12:00</span>
+			</button>
+		</div>
+		<span id="warningError">CookieNeural может ошибаться. Проверяйте нужное</span>
+	</div>
+</div>
+
+<!-- Clear Window -->
+<div id="windowClear" class="windowClear">
+	<div class="modalWindowSources">
+		<div id="windowTitle">
+			<b id="sourcesLabel">Очистка</b>
+			<button id="skipWindowButton" onclick="closeWindowClear()">
+				<img id="skipButtonLight" src="src/exit.png">
+				<img id="skipButtonDark" src="src/darkTheme/exit.png">
+			</button>
+		</div>
+		<div class="clearMessage">
+			<b>Очистить историю чатов?</b>
+			<span id="clearDescription">Вся ваша переписка безвозвратно будет удалена.</span>
+			<div id="clearButtons">
+				<button id="clearAccept">
+					<b>ОЧИСТИТЬ</b>
+				</button>
+				<button id="clearNot" onclick="closeWindowClear()">
+					<b id="clearLabelNot">НЕТ</b>
+				</button>
+			</div>
+		</div>
+		<div style="display: none;" id="clearLog">
+			<span id="clearSucessfly">История чатов очищена.</span>
+			<span id="clearError">Не удалось соединиться с сервером.</span>
+		</div>
+	</div>
+</div>
+
+<!-- Clear Window -->
+<div id="windowLogout" class="windowLogout">
+	<div class="modalWindowLogout">
+		<div id="windowTitle">
+			<b id="sourcesLabel">Выход</b>
+			<button id="skipWindowButton" onclick="closeWindowLogout()">
+				<img id="skipButtonLight" src="src/exit.png">
+				<img id="skipButtonDark" src="src/darkTheme/exit.png">
+			</button>
+		</div>
+		<div class="logoutMessage">
+			<b>Желаете выйти?</b>
+			<span id="logoutDescription">Переписка с ботом будет сохранена на вашем аккаунте.</span>
+			<div id="logoutButtons">
+				<button id="logoutAccept">
+					<b>ВЫЙТИ</b>
+				</button>
+				<button id="logoutNot" onclick="closeWindowLogout()">
+					<b id="clearLabelNot">НЕТ</b>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<input style="display: none;" id="imageImport" type="file" accept="image/*;capture"/>
+<input style="display: none;" id="fileImport" type="file" multiple>
+
+<script src="mechanic/app.js"></script>
+<script src="mechanic/language.js"></script>
+<script src="mechanic/message.js"></script>
+<script src="mechanic/interface.js"></script>
+<script src="mechanic/windows.js"></script>
+<script src="mechanic/items.js"></script>
+<script src="mechanic/upload.js"></script>
+
+</html>
