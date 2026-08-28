@@ -1,0 +1,161 @@
+.generatePageConnect {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.generatePage {
+	width: 50%;
+	display: wrap;
+	align-items: center;
+}
+
+.importContainer {
+	width: 100%;
+	display: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#uploadContainer {
+	width: 100%;
+}
+
+.uploadImagesList {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.uploadImagesList img {
+	width: 50%;
+}
+
+#buttonsField {
+	display: flex;
+	align-items: center;
+}
+
+#promptField textarea {
+	width: 100%;
+	height: 100px;
+	border: none;
+	border-radius: 3px;
+	padding: 5px;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+	margin-bottom: 3px;
+	font-size: 90%;
+	transition: height 0.1s ease-in-out;
+}
+
+#promptField textarea:focus {
+	height: 150px;
+}
+
+#buttonsField {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#buttonsField button {
+	padding: 5px;
+	border-radius: 3px;
+}
+
+#generateStartButton {
+	width: 98%;
+	display: flex;
+	align-items: center;
+	background: cornflowerblue;
+	color: white;
+	border: none;
+	font-size: 100%;
+	text-align: center;
+	justify-content: center;
+}
+
+#uploadImageButton {
+	display: flex;
+	align-items: center;
+	border: none;
+	background: white;
+	justify-content: center;
+}
+
+#uploadImageButton img {
+	width: 20px;
+	height: 20px;
+}
+
+.warningMessage {
+	width: 98%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid yellow;
+	background: black;
+	color: white;
+}
+
+.warningMessage img {
+	width: 50px;
+}
+
+.warningMessage a {
+	color: cornflowerblue;
+	text-decoration: none;
+	transition: opacity 0.1s ease-in-out;
+}
+
+.warningMessage a:hover {
+	opacity: 50%;
+}
+
+.generateScreen {
+	width: 100%;
+	height: 50%;
+	background: rgba(0,0,0,0.5);
+	border-radius: 2px;
+}
+
+.generateScreen img {
+	width: 50%;
+}
+
+.generatedContainer {
+	display: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	background: #fafafa;
+}
+
+.generatedContainer img {
+	width: 100%;
+	border-radius: 2px;
+}
+
+#generatedButtons {
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	border-radius: 3px;
+	background: rgba(0,0,0,0.5);
+	padding: 3px;
+}
+
+#generatedButtons button {
+	border: none;
+	background: none;
+}
+
+#generatedButtons img {
+	width: 25px;
+}

@@ -1,0 +1,642 @@
+a {
+	display: flex;
+	align-items: center;
+}
+
+.navbar {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 5px;
+	background: white;
+	position: fixed;
+	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+	z-index: 3;
+}
+
+#logotype img {
+	width: 160px;
+}
+
+#titleChat {
+	text-align: center;
+}
+
+#navButtons {
+	display: flex;
+	align-items: center;
+}
+
+#navButtons button {
+	border: none;
+	background: none;
+	transition: opacity 0.2s ease-in-out;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+#navButtons button:hover {
+	opacity: 50%;
+}
+
+#navButtons img {
+	width: 25px;
+}
+
+#buttonScrollDown {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+#buttonScrollDown button {
+	margin-left: auto;
+	border: none;
+	background: none;
+}
+
+#buttonScrollDown img {
+	width: 35px;
+}
+
+#downButtonDark {
+	display: none;
+}
+
+.connect_elements {
+	display: grid;
+	align-items: center;
+	place-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+.write_connect {
+	display: flex;
+	width: 100%;
+	place-items: center;
+	justify-content: center;
+}
+
+.writeConnect {
+	display: grid;
+	place-items: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+}
+
+.writeField {
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	bottom: 0;
+	position: fixed;
+	place-items: center;
+	margin: 0;
+}
+
+#writeFieldUp {
+	display: flex;
+	align-items: center;
+	background: white;
+	padding: 5px;
+	border-radius: 3px;
+	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+#writeFieldUp button {
+	border: none;
+	background: none;
+}
+
+#writeFieldUp img {
+	width: 20px;
+}
+
+#buttonSend {
+	display: none;
+}
+
+#buttonSend.visible {
+	display: inline-block;
+}
+
+#closeUpload {
+	display: none;
+}
+
+#writeMessageField {
+	width: 500px;
+	height: 25px;
+	resize: none;
+	border: none;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+	outline: none;
+	font-size: 100%;
+	background: none;
+}
+
+#writeMessageField:focus {
+	height: 60px;
+}
+
+#emptyButtonSend {
+	width: 30px;
+}
+
+#buttonSend {
+	border: none;
+	background: none;
+	transition: opacity 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+#buttonSend img {
+	width: 25px;
+}
+
+#buttonSend:hover {
+	opacity: 50%;
+}
+
+#buttonsDown {
+	display: flex;
+	align-items: center;
+	background: white;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+#writeAndScroll {
+	display: flex;
+	align-items: center;
+}
+
+#buttonScrollDown {
+	display: none;
+}
+
+#generateButton {
+	width: auto;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	background: #eeeeee;
+	padding: 3px;
+	text-decoration: none;
+	color: gray;
+	border-radius: 5px;
+}
+
+#generateButton img {
+	width: 20px;
+	margin-right: 3px;
+}
+
+.chatContainer {
+	display: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	background: white;
+	margin: 0;
+}
+
+.connectBanner {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	place-items: center;
+	align-items: center;
+	margin: 0;
+	position: static;
+	justify-content: center;
+}
+
+.chatBanner {
+	width: 500px;
+	display: grid;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	place-items: center;
+}
+
+.chatBanner img {
+	width: 100px;
+}
+
+.chatBanner span {
+	color: gray;
+}
+
+.loadingChat {
+	width: 100%;
+	height: 100%;
+	display: none;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	place-items: center;
+}
+
+.loadingChat img {
+	width: 30px;
+}
+
+#avatarMessage img {
+	width: 22px;
+	border-radius: 100%;
+	border: 1px solid #ccc;
+}
+
+#sendInformationUser {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+#sendInformationUser b {
+	margin-right: 5px;
+}
+
+#sendingMessage {
+	display: grid;
+	background: #fafafa;
+	text-align: right;
+	padding: 5px;
+	justify-content: end;
+}
+
+#sendingMessage a, #sendingMessage button {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+#gettingMessage {
+	display: grid;
+	background: white;
+	align-items: left;
+	text-align: left;
+	padding: 5px;
+}
+
+#gettingMessage a, #gettingMessage button {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.codeContainer {
+	display: grid;
+	background: #fafafa;
+	padding: 5px;
+	border-radius: 3px;
+	font-family: monospace;
+	margin-bottom: 3px;
+}
+
+#codeHead {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: gray;
+}
+
+#sucessCopy {
+	display: none;
+}
+
+#sourceCode {
+	color: black;
+}
+
+#messageCode {
+	color: gray;
+}
+
+.formContainer {
+	border-radius: 2px;
+	padding: 5px;
+	background: #fafafa;
+	margin-bottom: 3px;
+}
+
+#formUp {
+	display: flex;
+	justify-content: space-around;
+}
+
+#cardAbout {
+	display: flex;
+	justify-content: space-around;
+}
+
+#buttonsMessage {
+	display: flex;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: gray;
+}
+
+#rewrites_count {
+	display: flex;
+	align-items: center;
+}
+
+.topField {
+	margin-bottom: 40px;
+}
+
+.downField {
+	margin-bottom: 50px;
+}
+
+#getInformationUser {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+#getInformationUser img {
+	margin-right: 5px;
+}
+
+#gettingMessage button {
+	border: none;
+	background: none;
+}
+
+#gettingMessage img {
+	width: 18px;
+}
+
+#writeLabel {
+	color: gray;
+}
+
+#errorSending button {
+	display: flex;
+	border: none;
+	background: none;
+	font-size: 100%;
+	color: #ff3a3a;
+	align-items: center;
+}
+
+#errorSending img {
+	width: 18px;
+	margin-right: 5px;
+}
+
+#generateWarningMessage span {
+	color: #bfbfbf;
+	font-size: 80%;
+}
+
+#gettingError button {
+	display: flex;
+	align-items: center;
+	font-size: 100%;
+	color: #ffd400;
+	border: none;
+	background: none;
+	margin: 0;
+	text-align: left;
+	justify-content: left;
+}
+
+#gettingError img {
+	width: 22px;
+	margin-right: 5px;
+}
+
+#sources button {
+	font-size: 100%;
+	border-radius: 5px;
+	padding: 5px;
+	color: cornflowerblue;
+	margin: 0;
+}
+
+.importedFiles {
+	width: 497px;
+	display: flex;
+	background: white;
+	overflow: scroll;
+	border-radius: 3px;
+	padding: 3px;
+	z-index: 2;
+	justify-content: left;
+}
+
+#uploadMessage {
+	width: 500px;
+	display: flex;
+	background: white;
+	color: gray;
+	font-size: 90%;
+	text-align: center;
+	align-items: center;
+	place-items: center;
+	justify-content: center;
+}
+
+#imageInfo, #fileInfo {
+	margin-right: 5px;
+}
+
+#loadingFileLight, #loadingFileDark {
+	width: 40px; 
+}
+
+.imageImport {
+	display: flex;
+	align-items: center;
+	width: 250px;
+	padding: 3px;
+	background: white;
+	border-radius: 3px;
+}
+
+.imageImport img {
+	width: 50px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+.documentImport {
+	display: flex;
+	align-items: center;
+	width: auto;
+	max-width: 250px;
+	padding: 3px;
+	background: white;
+	border-radius: 3px;
+}
+
+.documentImport img {
+	width: 50px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+
+#skipFile {
+	border: none;
+	background: none;
+	padding: none;
+	color: gray;
+	font-size: 120%;
+	font-family: NormalFont;
+}
+
+.uploadError {
+	color: #ff3a3a;
+	max-height: 50px;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
+}
+
+.writingMessage {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	margin: 5px;
+}
+
+.writingMessage img {
+	width: 25px;
+	margin-right: 5px;
+}
+
+.listingUpload {
+	width: 200px;
+	display: none;
+	align-items: center;
+	border-radius: 3px;
+	box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+	background: white;
+	padding: 5px;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 50px;
+	margin-left: -350px;
+	justify-content: left;
+	z-index: 4;
+	animation: fadeInListing 0.1s ease-in-out;
+}
+
+.listingUpload img {
+	width: 20px;
+	margin-right: 5px;
+}
+
+.listingUpload button {
+	width: 300px;
+	display: flex;
+	align-items: center;
+	border: none;
+	background: none;
+	font-size: 100%;
+	color: gray;
+	padding: 3px;
+}
+
+#closeListingBar {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -2;
+}
+
+/* Connecting Message */
+
+.connecting_message {
+	width: 500px;
+	display: block;
+	place-items: center;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	margin-top: 50px;
+	margin: 0;
+	z-index: 2;
+	animation: fadeInConnect 0.1s ease-in-out;
+}
+
+#offlineMessage {
+	width: 500px;
+	display: none;
+	align-items: center;
+	text-align: left;
+	color: white;
+	top: 0;
+	background: rgba(195,48,48,0.5);
+	border: 1px solid red;
+	padding: 5px;
+	border-radius: 3px;
+	position: absolute;
+	margin-top: 35px;
+}
+
+#onlineMessage {
+	width: 500px;
+	display: none;
+	align-items: center;
+	text-align: left;
+	color: white;
+	top: 0;
+	background: rgba(184,212,157,0.5);
+	border: 1px solid green;
+	padding: 5px;
+	border-radius: 3px;
+	position: absolute;
+	margin-top: 35px;
+}
+
+#offlineMessage, #onlineMessage {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.connecting_message img {
+	width: 18px;
+	margin-right: 5px;
+}
+
+.connecting_message.offline #onlineMessage {
+	display: none;
+}
+
+.connecting_message.offline #offlineMessage {
+	display: block;
+}
+
+.connecting_message.online #onlineMessage {
+	display: block;
+}
+
+.connecting_message.online #onlineMessage {
+	display: none;
+}
+
+@keyframes fadeInListing {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeInConnect {
+	from {margin-top: -40px;}
+	to {margin-top: 0;}
+}

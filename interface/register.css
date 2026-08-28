@@ -1,0 +1,220 @@
+#background {
+	background-color: none;
+	background-image: url('backgrounds/register_light.png');
+    height: 100vh; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.navbar {
+	width: 100%;
+	display: flex;
+	padding: 5px;
+	background: white;
+	place-items: center;
+	justify-content: space-around;
+	position: fixed;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#logotype {
+	margin: 0;
+}
+
+#logotype img {
+	width: 150px;
+}
+
+#pages {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#pages a {
+	display: flex;
+	color: gray;
+	align-items: center;
+	text-decoration: none;
+}
+
+.register_position {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	place-items: center;
+	justify-content: center;
+}
+
+.register_container {
+	width: 500px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	padding: 10px;
+	background: white;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+	transition: height 0.1s ease-in-out;
+	margin-bottom: 5px;
+}
+
+#register_head {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+#register_head button {
+	border: none;
+	background: none;
+	color: gray;
+	font-size: 100%;
+}
+
+#registerButton {
+	color: #eba966;
+}
+
+.register_form, .login_form {
+	width: 100%;
+	display: grid;
+	align-items: center;
+	place-items: center;
+}
+
+.register_form input, .login_form input {
+	width: 100%;
+	background: none;
+	border: none;
+	font-size: 100%;
+	border-bottom: 1px solid #eeeeee;
+	margin-bottom: 3px;
+	transition: border-color 0.1s ease-in-out;
+}
+
+.register_form input:focus, .login_form input:focus {
+	border-color: cornflowerblue;
+}
+
+#password {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#password button {
+	display: flex;
+	border: none;
+	background: none;
+	margin: none;
+}
+
+#password img {
+	width: 24px;
+}
+
+#register, #login {
+	width: 70%;
+	border: none;
+	padding: 5px;
+	color: white;
+	font-size: 95%;
+	border-radius: 3px;
+	background: cornflowerblue;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#loadingReg, #loadingLogin {
+	width: 20px;
+	display: none;
+}
+
+#register_pages, #login_pages {
+	display: flex;
+	align-items: center;
+	color: cornflowerblue;
+	text-decoration: none;
+	justify-content: space-between;
+	margin: 3;
+}
+
+#register_pages a, #login_pages a {
+	text-decoration: none;
+}
+
+.login_form {
+	display: none;
+}
+
+.interface_buttons {
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: gray;
+}
+
+.interface_buttons img {
+	width: 22px;
+}
+
+#themeSetting, #langSetting {
+	width: 170px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#themeSetting button, #langSetting button {
+	border: none;
+	background: none;
+	margin: 0;
+}
+
+#themeSetting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#checkTheme {
+	appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid gray;
+    border-radius: 100%;
+    cursor: pointer;
+    background: none;
+    transition: background 0.1s ease-in-out;
+}
+
+#checkTheme:checked {
+	border: 1px solid #365b9f;
+	background: cornflowerblue;
+	background-image: url('src/checking.png');
+}
+
+#langSetting img {
+	border-radius: 2px;
+}
+
+.credits {
+	width: 100%;
+	display: flex;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	font-size: 90%;
+	padding: 5px;
+	justify-content: center;
+}

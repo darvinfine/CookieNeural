@@ -1,0 +1,419 @@
+/* Background */
+
+#backgroundTheme {
+	background: #efefef;
+}
+
+/* Navigation */
+
+.navbar {
+	background: white;
+}
+
+/* Logotype */
+
+#logoDay {
+	display: inline;
+}
+
+#logoNight {
+	display: none;
+}
+
+/* Title Chat */
+
+#titleChat {
+	color: black;
+}
+
+/* Navigation Buttons */
+
+#newChatLight {
+	display: inline;
+}
+
+#newChatDark {
+	display: none;
+}
+
+#historyChatsLight {
+	display: inline;
+}
+
+#historyChatsDark {
+	display: none;
+}
+
+#settingsButtonLight {
+	display: inline;
+}
+
+#settingsButtonDark {
+	display: none;
+}
+
+/* Write Message */
+
+#writeFieldUp {
+	background: white;
+}
+
+#closeUploadLight {
+	display: block;
+}
+
+#closeUploadDark {
+	display: none;
+}
+
+#writeMessageField {
+	color: black;
+}
+
+#writeMessageField::placeholder {
+	color: gray;
+}
+
+#downButtonLight {
+	display: inline;
+}
+
+#downButtonDark {
+	display: none;
+}
+
+.importedFiles {
+	background: background;
+	color: black;
+}
+
+.imageImport, .documentImport {
+	background: white;
+	color: black;
+}
+
+#weightFile {
+	color: gray;
+}
+
+#skipFile {
+	color: gray;
+}
+
+/* Chat Container */
+
+.chatContainer {
+	background: white;
+}
+
+.chatBanner b {
+	color: black;
+}
+
+.chatBanner span {
+	color: gray;
+}
+
+#pictureLight {
+	display: inline;
+}
+
+#pictureDark {
+	display: none;
+}
+
+#loadingLight {
+	display: inline;
+}
+
+#loadingDark {
+	display: none;
+}
+
+#sendingMessage {
+	background: #fafafa;
+	color: black;
+}
+
+#gettingMessage {
+	background: white;
+	color: black;
+}
+
+.codeContainer {
+	background: #fafafa;
+}
+
+#codeHead {
+	color: gray;
+}
+
+#sucessCopyLight {
+	display: block;
+}
+
+#sucessCopyDark {
+	display: none;
+}
+
+#sourceCode {
+	color: black;
+}
+
+#messageCode {
+	color: gray;
+}
+
+#formContainer {
+	background: #fafafa;
+}
+
+#lastLight {
+	display: inline;
+}
+
+#lastDark {
+	display: none;
+}
+
+#rewriteCount {
+	color: gray;
+}
+
+#nextLight {
+	display: inline;
+}
+
+#nextDark {
+	display: none;
+}
+
+#writeLabel {
+	color: gray;
+}
+
+.listingUpload {
+	background: white;
+}
+
+.listingUpload button {
+	color: gray;
+}
+
+#copyableDark {
+	display: none;
+}
+
+#rewriteDark {
+	display: none;
+}
+
+#typingDark {
+	display: none;
+}
+
+#darkInterfaceIcon {
+	display: none;
+}
+
+#uploadPhotoDark {
+	display: none;
+}
+
+#uploadDocumentDark {
+	display: none;
+}
+
+#loadingFileLight {
+	display: block;
+}
+
+#loadingFileDark {
+	display: none;
+}
+
+#copyableLight {
+	display: inline;
+}
+
+#rewriteLight {
+	display: inline;
+}
+
+#typingLight {
+	display: inline;
+}
+
+#lightInterfaceIcon {
+	display: inline;
+}
+
+#uploadPhotoLight {
+	display: inline;
+}
+
+#uploadDocumentLight {
+	display: inline;
+}
+
+/* Upload Button */
+
+#uploadButtonLight {
+	display: inline;
+}
+
+#uploadButtonDark {
+	display: none;
+}
+
+/* Windows Elements */
+
+.modalWindowSettings, .modalWindowSources {
+	background: white;
+	color: black;
+}
+
+#titleSettingsLeft span {
+	color: gray;
+}
+
+#skipButtonLight {
+	display: inline;
+}
+
+#skipButtonDark {
+	display: none;
+}
+
+#thingsList button, #thingsList a {
+	color: gray;
+}
+
+#pencilLight {
+	display: inline;
+}
+
+#pencilDark {
+	display: none;
+}
+
+#telegramLight {
+	display: inline;
+}
+
+#telegramDark {
+	display: none;
+}
+
+#faqLight {
+	display: inline;
+}
+
+#faqDark {
+	display: none;
+}
+
+#interface_setting {
+	border-bottom: 1px solid #eeeeee;
+}
+
+#localization_setting {
+	border-bottom: 1px solid #eeeeee;
+}
+
+#localization_setting button {
+	background: #efefef;
+	color: gray;
+}
+
+#credits span {
+	color: gray;
+}
+
+#name_chat {
+	color: black;
+}
+
+#datetime_chat {
+	color: gray;
+}
+
+#clearLight {
+	display: inline;
+}
+
+#clearDark {
+	display: none;
+}
+
+#sourceAdress {
+	color: gray;
+}
+
+#sourceDescription {
+	color: black;
+}
+
+.modalWindowAccount input {
+	border-bottom: 1px solid #ccc;
+}
+
+#accountButtons button {
+	color: gray;
+}
+
+#clearDescription {
+	color: gray;
+}
+
+#logoutDescription {
+	color: gray;
+}
+
+/* ====== FAQ PAGE ====== */
+
+#logoLight {
+	display: inline;
+}
+
+#logoDark {
+	display: none;
+}
+
+#downFAQ1 {
+	color: black;
+}
+
+#downFAQ2 {
+	color: rgb(193,193,193);
+}
+
+/* ============ REGISTER THEME ========== */
+
+#background {
+	background-image: url('backgrounds/register_light.png');
+}
+
+.interface_buttons {
+	color: gray;
+}
+
+#statusLight {
+	display: inline;
+}
+
+#statusDark {
+	display: none;
+}
+
+#hiddenLight {
+	display: inline;
+}
+
+#hiddenDark {
+	display: none;
+}
+
+.credits {
+	color: gray;
+}

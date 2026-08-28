@@ -1,0 +1,131 @@
+/* Components App */
+
+#writeMessageField::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+#writeMessageField::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+#writeMessageField::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+#writeMessageField::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+#writeMessageField::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #bfbfbf;
+}
+
+.importedFiles::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.importedFiles::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.importedFiles::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.importedFiles::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.importedFiles::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #bfbfbf;
+}
+
+.chatsListing::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.chatsListing::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.chatsListing::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.chatsListing::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.chatsListing::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #bfbfbf;
+}
+
+.sourcesListing::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.sourcesListing::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.sourcesListing::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.sourcesListing::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.sourcesListing::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #bfbfbf;
+}
+
+/* Firefox Version */
+
+#writeMessageField {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.importedFiles {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.chatsListing {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.sourcesListing {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}

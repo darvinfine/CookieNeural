@@ -1,1 +1,40 @@
+@font-face {
+	font-family: 'NormalFont';
+	src: url('fonts/NormalFont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
+html, body {
+	margin: 0;
+	font-family: NormalFont;
+	cursor: default;
+}
+
+button, input, textarea {
+	outline: none;
+	font-family: NormalFont;
+}
+
+button {
+	transition: opacity 0.1s ease-in-out;
+}
+
+button:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
+a {
+	color: cornflowerblue;
+	transition: opacity 0.1s ease-in-out;
+}
+
+a:hover {
+	opacity: 50%;
+}
+
+a img {
+	width: 18px;
+	margin-right: 5px;
+}

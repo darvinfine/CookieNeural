@@ -1,0 +1,651 @@
+/* Background */
+
+#backgroundTheme {
+	background: #353541;
+}
+
+/* Navigation */
+
+.navbar {
+	background: #2b2b33;
+}
+
+/* Logotype */
+
+#logoDay {
+	display: none;
+}
+
+#logoNight {
+	display: inline;
+}
+
+/* Title Chat */
+
+#titleChat {
+	color: white;
+}
+
+/* Navigation Buttons */
+
+#newChatLight {
+	display: none;
+}
+
+#newChatDark {
+	display: inline;
+}
+
+#historyChatsLight {
+	display: none;
+}
+
+#historyChatsDark {
+	display: inline;
+}
+
+#settingsButtonLight {
+	display: none;
+}
+
+#settingsButtonDark {
+	display: inline;
+}
+
+/* Write Message */
+
+#writeFieldUp {
+	background: #41404e;
+}
+
+#closeUploadLight {
+	display: none;
+}
+
+#closeUploadDark {
+	display: block;
+}
+
+#writeMessageField {
+	color: white;
+}
+
+#writeMessageField::placeholder {
+	color: rgb(193,193,193);
+}
+
+#downButtonLight {
+	display: none;
+}
+
+#downButtonDark {
+	display: inline;
+}
+
+/* Chat Container */
+
+.chatContainer {
+	background: #353541;
+}
+
+.chatBanner b {
+	color: white;
+}
+
+.chatBanner span {
+	color: rgb(193,193,193);
+}
+
+#pictureLight {
+	display: none;
+}
+
+#pictureDark {
+	display: inline;
+}
+
+#loadingLight {
+	display: none;
+}
+
+#loadingDark {
+	display: inline;
+}
+
+#sendingMessage {
+	background: #3d3f4b;
+	color: white;
+}
+
+#gettingMessage {
+	background: #444653;
+	color: white;
+}
+
+.codeContainer {
+	background: #3d3f4b;
+}
+
+#codeHead {
+	color: rgb(193,193,193);
+}
+
+#sucessCopyLight {
+	display: none;
+}
+
+#sucessCopyDark {
+	display: block;
+}
+
+#sourceCode {
+	color: white;
+}
+
+#messageCode {
+	color: rgb(193,193,193);
+}
+
+#formContainer {
+	background: #3d3f4b;
+}
+
+#lastLight {
+	display: none;
+}
+
+#lastDark {
+	display: inline;
+}
+
+#rewriteCount {
+	color: rgb(193,193,193);
+}
+
+#nextLight {
+	display: none;
+}
+
+#nextDark {
+	display: inline;
+}
+
+#writeLabel {
+	color: rgb(193,193,193);
+}
+
+.listingUpload {
+	background: #41404e;
+}
+
+.listingUpload button {
+	color: rgb(193,193,193);
+}
+
+#copyableDark {
+	display: inline;
+}
+
+#rewriteDark {
+	display: inline;
+}
+
+#typingDark {
+	display: inline;
+}
+
+#darkInterfaceIcon {
+	display: inline;
+}
+
+#uploadPhotoDark {
+	display: inline;
+}
+
+#uploadDocumentDark {
+	display: inline;
+}
+
+#loadingFileLight {
+	display: none;
+}
+
+#loadingFileDark {
+	display: block;
+}
+
+#copyableLight {
+	display: none;
+}
+
+#rewriteLight {
+	display: none;
+}
+
+#typingLight {
+	display: none;
+}
+
+#lightInterfaceIcon {
+	display: none;
+}
+
+#uploadPhotoLight {
+	display: none;
+}
+
+#uploadDocumentLight {
+	display: none;
+}
+
+/* Upload Button */
+
+#uploadButtonLight {
+	display: none;
+}
+
+#uploadButtonDark {
+	display: inline;
+}
+
+/* Windows Elements */
+
+.modalWindowSettings, .modalWindowSources, .modalWindowHistory, .modalWindowAccount, .modalWindowHistory, .modalWindowLogout {
+	background: #41404e;
+	color: white;
+}
+
+#titleSettingsLeft span {
+	color: rgb(193,193,193);
+}
+
+#skipButtonLight {
+	display: none;
+}
+
+#skipButtonDark {
+	display: inline;
+}
+
+#thingsList a, #thingsList button {
+	color: rgb(193,193,193);
+}
+
+#pencilLight {
+	display: none;
+}
+
+#pencilDark {
+	display: inline;
+}
+
+#usernameLabel {
+	color: rgb(193,193,193);
+}
+
+#interface_setting {
+	border-bottom: 1px solid #373748;
+}
+
+#localization_setting {
+	border-bottom: 1px solid #373748;
+}
+
+#localization_setting button {
+	background: #353540;
+	color: #9999b5;
+}
+
+#credits span {
+	color: rgb(193,193,193);
+}
+
+#name_chat {
+	color: white;
+}
+
+#datetime_chat {
+	color: rgb(193,193,193);
+}
+
+#clearLight {
+	display: none;
+}
+
+#clearDark {
+	display: inline;
+}
+
+#countSources {
+	color: rgb(193,193,193);
+}
+
+#sourceAdress {
+	color: rgb(193,193,193);
+}
+
+#sourceDescription {
+	color: white;
+}
+
+.modalWindowHistory span {
+	color: rgb(193,193,193);
+}
+
+#warningError {
+	color: rgb(193,193,193);
+}
+
+.modalWindowAccount input {
+	color: white;
+	border-bottom: 1px solid #1e1e26;
+}
+
+.modalWindowAccount input::placeholder {
+	color: rgb(193,193,193);
+}
+
+#accountButtons button {
+	color: rgb(193,193,193);
+}
+
+/* ====== FAQ PAGE ====== */
+
+#faqBackground {
+	background: #353541;
+}
+
+.navigate {
+	border-right: 1px solid #272730;
+}
+
+#logoLight {
+	display: none;
+}
+
+#logoDark {
+	display: inline;
+}
+
+#downFAQ1 {
+	color: white;
+}
+
+#downFAQ2 button {
+	color: rgb(193,193,193);
+}
+
+.faqListing {
+	border-color: #2b2b32;
+}
+
+.faqListing button, .faqContainer {
+	color: white;
+}
+
+/* Components App */
+
+#writeMessageField::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+#writeMessageField::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+#writeMessageField::-webkit-scrollbar-thumb {
+	background: #353541;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+#writeMessageField::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+#writeMessageField::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #1e1e26;
+}
+
+.importedFiles {
+	background: #41404e;
+	color: white;
+}
+
+#uploadMessage {
+	background: #41404e;
+	color: rgb(193,193,193);
+}
+
+.imageImport, .documentImport {
+	background: #41404e;
+	color: white;
+}
+
+#weightFile {
+	color: rgb(193,193,193);
+}
+
+#skipFile {
+	color: rgb(193,193,193);
+}
+
+#clearDescription {
+	color: rgb(193,193,193);
+}
+
+#logoutDescription {
+	color: rgb(193,193,193);
+}
+
+.importedFiles::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.importedFiles::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.importedFiles::-webkit-scrollbar-thumb {
+	background: #353541;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.importedFiles::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.importedFiles::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #1e1e26;
+}
+
+.chatsListing::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.chatsListing::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.chatsListing::-webkit-scrollbar-thumb {
+	background: #353541;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.chatsListing::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.chatsListing::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #1e1e26;
+}
+
+.sourcesListing::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.sourcesListing::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.sourcesListing::-webkit-scrollbar-thumb {
+	background: #353541;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.sourcesListing::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.sourcesListing::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #1e1e26;
+}
+
+.faqListing::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+	transition: height 0.1s ease-in-out;
+}
+
+.faqListing::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+
+.faqListing::-webkit-scrollbar-thumb {
+	background: #353541;
+	border-radius: 4px;
+	transition: background 0.1s ease-in-out;
+}
+
+.faqListing::-webkit-scrollbar:hover {
+	width: 4px;
+	height: 4px;
+}
+
+.faqListing::-webkit-scrollbar-thumb:hover {
+	width: 4px;
+	height: 4px;
+	background: #1e1e26;
+}
+
+/* Firefox Version */
+
+#writeMessageField {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.importedFiles {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.chatsListing {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.sourcesListing {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+.faqListing {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f1f1f1;
+}
+
+/* ============ REGISTER THEME ========== */
+
+#background {
+	background-image: url('backgrounds/register_dark.png');
+}
+
+#navbarTheme {
+	background-color: #2b2b33;
+}
+
+#pages a {
+	color: rgb(193,193,193);
+}
+
+#faqLight {
+	display: none;
+}
+
+#faqDark {
+	display: inline;
+}
+
+#telegramLight {
+	display: none;
+}
+
+#telegramDark {
+	display: inline;
+}
+
+.register_container {
+	background: #353541;
+	border-color: #21212a;
+}
+
+.register_container input {
+	color: white;
+	border-color: #21212a;
+}
+
+.register_container input::placeholder {
+	color: rgb(193,193,193);
+}
+
+#register_head button {
+	color: rgb(193,193,193);
+}
+
+.interface_buttons {
+	color: rgb(193,193,193);
+}
+
+#statusLight {
+	display: none;
+}
+
+#statusDark {
+	display: inline;
+}
+
+#hiddenLight {
+	display: none;
+}
+
+#hiddenDark {
+	display: inline;
+}
+
+.credits {
+	color: rgb(193,193,193);
+}

@@ -1,0 +1,521 @@
+#windowTitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#skipWindowButton {
+	border: none;
+	background: none;
+	font-size: 100%;
+	color: black;
+}
+
+#skipWindowButton img {
+	width: 15px;
+}
+
+#leftpart-setting {
+	display: flex;
+	align-items: center;
+}
+
+#leftpart-setting img {
+	width: 25px;
+}
+
+.windowSettings {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowSettings {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 50%;
+	max-width: 600px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+#titleSettingsLeft b {
+	margin-right: 5px;
+}
+
+#titleSettingsLeft span {
+	color: gray;
+}
+
+#interface_setting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+#interface_setting img {
+	margin-right: 5px;
+}
+
+#statusIconInterface {
+	display: flex;
+	text-align: left;
+	align-items: center;
+}
+
+#statusIconInterface img {
+	width: 25px;
+}
+
+#interface_setting input {
+	margin-left: auto;
+	appearance: none;
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid gray;
+    border-radius: 100%;
+    cursor: pointer;
+    background: none;
+    transition: background 0.1s ease-in-out;
+}
+
+#interface_setting input:checked {
+	border: 1px solid #365b9f;
+	background: cornflowerblue;
+	background-image: url('src/checking.png');
+}
+
+#localization_setting {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+#localization_setting img {
+	width: 25px;
+	margin-right: 5px;
+	border-radius: 1px;
+}
+
+#localization_setting button {
+	background: #f5f5f5;
+    color: gray;
+    padding: 3px 15px;
+    border-radius: 3px;
+    border: none;
+    font-size: 90%;
+	margin-bottom: 2px;
+}
+
+#username_setting {
+	margin: 0;
+}
+
+#username_setting button {
+	display: flex;
+	align-items: center;
+	color: gray;
+	background: none;
+	font-size: 100%;
+	border: none;
+	margin: 0;
+}
+
+#username_setting img {
+	width: 25px;
+	margin-right: 5px;
+}
+
+#createAccount, #loginLabel {
+	color: cornflowerblue;
+	text-decoration: none;
+}
+
+#credits {
+	display: flex;
+	color: gray;
+	font-size: 70%;
+	justify-content: center;
+}
+
+#credits span {
+	text-align: center;
+}
+
+.windowSources {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowSources {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 50%;
+	max-width: 600px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+#countSources {
+	color: gray;
+}
+
+.sourcesListing {
+	height: auto;
+	max-height: 300px;
+	overflow: scroll;
+}
+
+.sourceContainer {
+	display: grid;
+	align-items: center;
+	text-align: left;
+	cursor: pointer;
+}
+
+#sourceName {
+	color: cornflowerblue;
+}
+
+#sourceAdress {
+	color: gray;
+}
+
+#sourceDescription {
+	color: black;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hideen;
+}
+
+.windowHistory {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowHistory {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 50%;
+	max-width: 600px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+#window_history_right {
+	display: flex;
+	align-items: center;
+}
+
+#clearChatsButton {
+	border: none;
+	background: none;
+	margin: 0;
+}
+
+#clearChatsButton img {
+	width: 25px;
+}
+
+#warningError {
+	display: flex;
+	text-align: center;
+	font-size: 90%;
+	color: gray;
+	justify-content: center;
+}
+
+.loginMessage {
+	display: grid;
+	align-items: center;
+	text-align: center;
+	place-items: center;
+	justify-content: center;
+}
+
+.loginMessage span {
+	color: gray;
+}
+
+#nullMessage {
+	width: 100%;
+	color: gray;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.chatsListing {
+	height: auto;
+	max-height: 300px;
+	overflow: scroll;
+}
+
+.chatPage {
+	width: 100%;
+	display: grid;
+	text-align: left;
+	font-size: 100%;
+	border: none;
+	background: none;
+	margin: 0;
+	cursor: pointer;
+}
+
+.windowAccount {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowAccount {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 40%;
+	max-width: 500px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+#usernameField {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.modalWindowAccount input {
+	width: 100%;
+	border: none;
+	font-size: 100%;
+	background: none;
+	margin-right: 5px;
+	border-bottom: 1px solid #ccc;
+	transition: border-color 0.1s ease-in-out;
+}
+
+.modalWindowAccount input:focus {
+	border-color: cornflowerblue;
+}
+
+#changeUsername {
+	display: flex;
+	border: none;
+	background: none;
+	margin: none;
+	font-size: 100%;
+	color: cornflowerblue;
+	align-items: center;
+}
+
+#loadUsername {
+	width: 20px;
+	margin-left: 5px; 
+}
+
+#usernameError {
+	color: #ff3a3a;
+}
+
+#usernameSucess {
+	color: #72c572;
+}
+
+#accountButtons {
+	display: grid;
+}
+
+#accountButtons button {
+	display: flex;
+	align-items: center;
+	border: none;
+	background: none;
+	color: gray;
+	margin: 0;
+	padding: 2px;
+	font-size: 100%;
+	margin-bottom: 2px;
+}
+
+#accountButtons img {
+	width: 25px;
+	margin-right: 5px;
+}
+
+#createAccount, #loginLabel {
+	color: cornflowerblue;
+	text-decoration: none;
+}
+
+#logoutAccount, #logoutLabel {
+	color: #ff3a3a;
+}
+
+.windowClear {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowClear {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 40%;
+	max-width: 500px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+.clearMessage {
+	display: grid;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	place-items: center;
+}
+
+#clearButtons {
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#clearButtons button {
+	font-size: 100%;
+}
+
+#clearAccept, #logoutAccept {
+	border: none;
+	background: none;
+	padding: none;
+	color: #ff3a3a;
+}
+
+#clearNot, #logoutNot {
+	border: none;
+	background: none;
+	padding: none;
+	color: cornflowerblue;
+}
+
+#clearLog {
+	display: flex;
+	justify-content: center;
+}
+
+#clearSucessfly {
+	color: #72c572;
+}
+
+#clearError {
+	color: #ff3a3a;
+}
+
+.windowLogout {
+    display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.5);
+	z-index: 1000;
+	transition: opacity 0.3s ease;
+}
+
+.modalWindowLogout {
+    position: releative;
+	background: white;
+	padding: 10px;
+	width: 40%;
+	max-width: 500px;
+	border-radius: 3px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	animation: fadeIn 0.1s;
+}
+
+.logoutMessage {
+	display: grid;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	place-items: center;
+}
+
+#logoutButtons {
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#logoutButtons button {
+	font-size: 100%;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0; transform: translateY(40px);}
+	to {opacity: 1; transform: translateY(0);}
+}

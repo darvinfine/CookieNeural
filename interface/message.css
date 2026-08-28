@@ -1,0 +1,48 @@
+.messageCookieFiles {
+	display: flex;
+	align-items: center;
+	width: 500px;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	border-radius: 3px;
+	padding: 3px;
+	margin: 5px;
+	border: 1px solid rgba(0,0,0,0.7);
+	position: fixed;
+	bottom: 0;
+	justify-content: center;
+	animation: fadeIn 0.2s;
+}
+
+.messageCookieFiles img {
+	width: 30px;
+	margin-right: 3px;
+}
+
+.messageCookieFiles button {
+	padding: 10px;
+	background: white;
+	color: black;
+	border-radius: 3px;
+	border: none;
+}
+
+.messageCopyable {
+	display: none;
+	align-items: center;
+	width: auto;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	border-radius: 3px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid rgba(0,0,0,0.7);
+	position: fixed;
+	bottom: 0;
+	animation: fadeIn 0.2s;
+}
+
+@keyframe fadeIn {
+	from {transform: translateY(40px);}
+	to {transform: translateY(0);}
+}
