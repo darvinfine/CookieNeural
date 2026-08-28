@@ -1,0 +1,19 @@
+const regForm = document.getElementById("registerForm");
+const loginForm = document.getElementById("loginForm");
+
+const regButton = document.getElementById("registerButton");
+const loginButton = document.getElementById("loginButton");
+
+function openRegForm() {
+	regForm.style.display = "grid";
+	loginForm.style.display = "none";
+	regButton.style.color = "#eba966";
+	loginButton.style.color = "gray";
+}
+
+function openLoginForm() {
+	regForm.style.display = "none";
+	loginForm.style.display = "grid";
+	regButton.style.color = "gray";
+	loginButton.style.color = "#eba966";
+}
